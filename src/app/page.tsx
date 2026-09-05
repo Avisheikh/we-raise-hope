@@ -7,7 +7,6 @@ import { PartnerLinks } from "@/components/PartnerLinks";
 import { TrustBar } from "@/components/TrustBar";
 import { pageMetadata } from "@/lib/seo";
 import {
-  bodgaun,
   img,
   liveImpact,
   operatingModel,
@@ -183,7 +182,11 @@ export default function HomePage() {
                     src={program.image}
                     alt={program.imageAlt}
                     fill
-                    className="object-cover"
+                    className={
+                      program.slug === "healthcare"
+                        ? "object-cover object-[center_42%]"
+                        : "object-cover"
+                    }
                     sizes="(max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
@@ -197,39 +200,6 @@ export default function HomePage() {
                 </div>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Hospital spotlight — audit flagship */}
-      <section className="section-pad bg-white" aria-labelledby="hospital-home">
-        <div className="container-page grid items-center gap-10 lg:grid-cols-2">
-          <div className="relative aspect-[4/3] overflow-hidden">
-            <Image
-              src={img.hospital}
-              alt="Surgical team performing an operation at Bodgaun Primary Hospital"
-              fill
-              className="object-cover object-center"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
-          <div>
-            <p className="eyebrow">The hospital</p>
-            <h2 id="hospital-home" className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
-              Bodgaun now has local surgical care
-            </h2>
-            <p className="mt-5 text-lg text-ink-soft">{bodgaun.status}</p>
-            <ul className="mt-6 space-y-2 text-sm text-ink-soft">
-              <li>· {bodgaun.beds}</li>
-              <li>· {bodgaun.population}</li>
-              <li>· {bodgaun.location}</li>
-            </ul>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink href="/bodgaun-hospital">Hospital details</ButtonLink>
-              <ButtonLink href="/donate" variant="secondary">
-                Help keep it running
-              </ButtonLink>
-            </div>
           </div>
         </div>
       </section>
