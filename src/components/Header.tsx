@@ -98,16 +98,16 @@ export function Header() {
         ) : null}
       </div>
 
-      <div className="grid grid-cols-2 lg:hidden">
+      <div className="header-cta-bar grid h-11 grid-cols-2 lg:hidden">
         <Link
           href="/donate"
-          className="flex items-center justify-center bg-brand py-2.5 text-sm font-bold text-white no-underline"
+          className="flex h-full items-center justify-center bg-brand text-sm font-bold text-white no-underline"
         >
           Donate
         </Link>
         <Link
           href="/programs"
-          className="flex items-center justify-center bg-mist-strong py-2.5 text-sm font-bold text-forest no-underline"
+          className="flex h-full items-center justify-center bg-mist-strong text-sm font-bold text-forest no-underline"
         >
           Our Work
         </Link>

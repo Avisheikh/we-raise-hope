@@ -38,8 +38,8 @@ const pathways = [
 export default function HomePage() {
   return (
     <>
-      {/* First viewport: hero + TrustBar (below sticky header) */}
-      <div className="flex min-h-[calc(100dvh-8.75rem)] flex-col lg:min-h-[calc(100dvh-6.25rem)]">
+      {/* First viewport: hero + TrustBar (fits under sticky header on every screen) */}
+      <div className="home-first-screen">
         <section className="relative flex min-h-0 flex-1 overflow-hidden bg-forest">
           <Image
             src={img.hero}
@@ -47,33 +47,37 @@ export default function HomePage() {
             fill
             priority
             quality={90}
-            className="object-cover object-[64%_28%]"
+            className="home-hero-image"
             sizes="100vw"
           />
           <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/45 to-transparent md:bg-gradient-to-r md:from-forest/90 md:via-forest/50 md:via-32% md:to-transparent md:to-55%"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest/95 via-forest/55 to-forest/20 md:bg-gradient-to-r md:from-forest/92 md:via-forest/55 md:via-35% md:to-transparent md:to-58%"
             aria-hidden
           />
-          <div className="container-page relative flex flex-1 items-end py-8 md:items-center md:py-10 lg:py-12">
-            <div className="max-w-xl text-white md:max-w-[34rem]">
-              <p className="font-display fade-up text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+          <div className="container-page relative flex min-h-0 flex-1 items-end py-4 sm:py-6 md:items-center md:py-8 lg:py-10">
+            <div className="home-hero-copy text-white">
+              <p className="font-display home-hero-title fade-up font-semibold tracking-tight text-white">
                 {site.name}
               </p>
-              <h1 className="font-display fade-up-delay mt-3 text-xl font-semibold leading-[1.12] tracking-tight text-white sm:mt-4 sm:text-2xl md:text-3xl lg:text-4xl">
+              <h1 className="font-display home-hero-tagline fade-up-delay font-semibold leading-[1.15] tracking-tight text-white">
                 {site.tagline}
               </h1>
-              <p className="fade-up-delay-2 mt-3 max-w-md text-sm leading-relaxed text-white/90 sm:mt-4 sm:text-base md:text-lg">
+              <p className="home-hero-body fade-up-delay-2 leading-relaxed text-white/90">
                 When we give together, children in rural Nepal can learn, heal, and thrive—closer to home.
               </p>
-              <div className="fade-up-delay-2 mt-5 flex flex-wrap gap-3 sm:mt-7">
+              <div className="home-hero-actions fade-up-delay-2 flex flex-wrap items-center gap-2.5 sm:gap-3">
                 <ButtonLink
                   href="/donate"
                   variant="amber"
-                  className="!px-7 !py-3 !text-sm !font-bold !uppercase !tracking-wide !text-ink"
+                  className="!px-5 !py-2.5 !text-xs !font-bold !uppercase !tracking-wide !text-ink sm:!px-7 sm:!py-3 sm:!text-sm"
                 >
                   Give now
                 </ButtonLink>
-                <ButtonLink href="/programs" variant="ghostLight">
+                <ButtonLink
+                  href="/programs"
+                  variant="ghostLight"
+                  className="!px-5 !py-2.5 !text-xs sm:!px-6 sm:!py-3 sm:!text-sm"
+                >
                   Our work
                 </ButtonLink>
               </div>
@@ -111,16 +115,16 @@ export default function HomePage() {
       <section className="section-pad bg-forest text-white" aria-labelledby="help-heading">
         <div className="container-page">
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-amber">Make a difference</p>
-          <h2 id="help-heading" className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
+          <h2 id="help-heading" className="font-display mt-3 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
             We can raise hope when we all work together.
           </h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {waysToHelp.map((item) => {
               const isGive = item.href.startsWith("/donate");
               return (
-                <article key={item.title} className="flex flex-col border border-white/15 bg-white/5 p-6">
-                  <h3 className="font-display text-2xl font-semibold">{item.title}</h3>
-                  <p className="mt-3 flex-1 text-sm text-white/75">{item.body}</p>
+                <article key={item.title} className="flex h-full flex-col border border-white/15 bg-white/5 p-5 sm:p-6">
+                  <h3 className="font-display text-xl font-semibold sm:text-2xl">{item.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-white/75">{item.body}</p>
                   <div className="mt-6">
                     <ButtonLink
                       href={item.href}
@@ -139,12 +143,12 @@ export default function HomePage() {
 
       {/* FA: Crisis / need with math */}
       <section className="section-pad" aria-labelledby="need-heading">
-        <div className="container-page max-w-3xl">
+        <div className="container-page">
           <p className="eyebrow">The need</p>
-          <h2 id="need-heading" className="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 id="need-heading" className="font-display mt-3 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
             Rural families should not travel days for care—or lose a future for lack of a classroom.
           </h2>
-          <p className="mt-5 text-lg text-ink-soft">
+          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-soft">
             Right now, Bodgaun Primary Hospital treats{" "}
             <strong className="text-ink">550+ patients every month</strong>, with{" "}
             <strong className="text-ink">13 major</strong> and{" "}
