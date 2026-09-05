@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate — We Raise Hope</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background: transparent;
+      }
+      #embed-root {
+        width: 100%;
+        min-height: 420px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="embed-root">
+      <givebutter-widget id="LeZZmE"></givebutter-widget>
+    </div>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const widgetId = params.get("widgetId") || "LeZZmE";
+      document.getElementById("embed-root").innerHTML =
+        '<givebutter-widget id="' + widgetId + '"></givebutter-widget>';
+
+      function reportHeight() {
+        const h = Math.max(document.body.scrollHeight, 420);
+        window.parent.postMessage("givebutter-height:" + Math.ceil(h), "*");
+      }
+      new ResizeObserver(reportHeight).observe(document.body);
+      setTimeout(reportHeight, 800);
+      setTimeout(reportHeight, 1800);
+      setTimeout(reportHeight, 3500);
+    </script>
+    <script
+      async
+      src="https://widgets.givebutter.com/latest.umd.cjs?acct=ylAigQK73xNS12hH&p=other"
+    ></script>
+  </body>
+</html>

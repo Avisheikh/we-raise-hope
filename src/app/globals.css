@@ -1,26 +1,158 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* User palette — lightened for airy nonprofit UI */
+  --chocolate: #602718;
+  --ember: #cf4209;
+  --mint: #b1d1c8;
+  --sun: #ff9912;
+  --sage: #95a184;
+
+  --brand: color-mix(in srgb, var(--ember) 82%, white);
+  --brand-deep: var(--ember);
+  --forest: color-mix(in srgb, var(--chocolate) 78%, #8a5a48);
+  --forest-mid: color-mix(in srgb, var(--chocolate) 55%, #c4a090);
+  --ink: color-mix(in srgb, var(--chocolate) 72%, black);
+  --ink-soft: color-mix(in srgb, var(--chocolate) 42%, #8a7068);
+  --cream: color-mix(in srgb, var(--mint) 22%, white);
+  --mist: color-mix(in srgb, var(--mint) 55%, white);
+  --mist-strong: color-mix(in srgb, var(--mint) 78%, white);
+  --amber: color-mix(in srgb, var(--sun) 88%, white);
+  --line: color-mix(in srgb, var(--sage) 32%, white);
+  --success: color-mix(in srgb, var(--sage) 70%, #4a6b45);
+  --white: #ffffff;
+  --background: var(--cream);
+  --foreground: var(--ink);
 }
 
 @theme inline {
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-forest: var(--forest);
+  --color-forest-mid: var(--forest-mid);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-cream: var(--cream);
+  --color-mist: var(--mist);
+  --color-mist-strong: var(--mist-strong);
+  --color-amber: var(--amber);
+  --color-line: var(--line);
+  --color-success: var(--success);
+  --color-chocolate: var(--chocolate);
+  --color-mint: var(--mint);
+  --color-sage: var(--sage);
+  --color-sun: var(--sun);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-newsreader);
+  --font-sans: var(--font-source-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-source-sans), "Source Sans 3", ui-sans-serif, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  letter-spacing: 0.005em;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--mint) 50%, white);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.font-display {
+  font-family: var(--font-newsreader), Newsreader, ui-serif, Georgia, "Times New Roman", serif;
+  font-optical-sizing: auto;
+  font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+  letter-spacing: -0.018em;
+  line-height: 1.15;
+}
+
+.container-page {
+  width: min(1160px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.container-narrow {
+  width: min(720px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-source-sans), "Source Sans 3", ui-sans-serif, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-deep);
+}
+
+.eyebrow-on-dark {
+  color: var(--amber);
+}
+
+.section-pad {
+  padding-block: clamp(3.25rem, 7vw, 5.5rem);
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fade-up {
+  animation: fade-up 0.85s ease both;
+}
+
+.fade-up-delay {
+  animation: fade-up 0.95s ease 0.12s both;
+}
+
+.fade-up-delay-2 {
+  animation: fade-up 1.05s ease 0.22s both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fade-up,
+  .fade-up-delay,
+  .fade-up-delay-2 {
+    animation: none;
+  }
 }

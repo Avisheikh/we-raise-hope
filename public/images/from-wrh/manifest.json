@@ -1,0 +1,35 @@
+{
+    "name": "We Raise Hope",
+    "short_name": "We Raise Hope",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#EAF4F1",
+    "theme_color": "#CF4209",
+    "description": "Helping children and families in rural Nepal through education, healthcare, sports, and sustainable livelihoods.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
