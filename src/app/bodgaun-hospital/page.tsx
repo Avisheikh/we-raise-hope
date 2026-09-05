@@ -33,7 +33,13 @@ export default function BodgaunHospitalPage() {
       <section className="section-pad">
         <div className="container-page grid gap-10 lg:grid-cols-2">
           <div className="relative aspect-[4/3] overflow-hidden">
-            <Image src={img.hospital} alt="Bodgaun Primary Hospital" fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" />
+            <Image
+              src={img.hospital}
+              alt="Surgical team performing an operation at Bodgaun Primary Hospital"
+              fill
+              className="object-cover"
+              sizes="(max-width:1024px) 100vw, 50vw"
+            />
           </div>
           <div>
             <h2 className="font-display text-3xl font-semibold">Facility facts</h2>

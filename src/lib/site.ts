@@ -508,6 +508,6 @@ export const img = {
   entrepreneurship: "/images/from-wrh/uploads/enterpernurship_ylvfpj.jpg",
   flood: "/images/from-wrh/external/rasuwa_flood1.jpg",
   logo: "/logo.png",
-  hospital: "/images/from-wrh/uploads/med15_jkuiw4.png",
+  hospital: "/images/from-wrh/uploads/bodgaun-surgery-real.jpg",
   donateHero: "/images/generated/donate-hero-nepal.jpg",
 } as const;

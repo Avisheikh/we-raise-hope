@@ -207,9 +207,9 @@ export default function HomePage() {
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
               src={img.hospital}
-              alt="Bodgaun Primary Hospital and medical care"
+              alt="Surgical team performing an operation at Bodgaun Primary Hospital"
               fill
-              className="object-cover"
+              className="object-cover object-center"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
