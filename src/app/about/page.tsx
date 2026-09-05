@@ -51,9 +51,26 @@ export default function AboutPage() {
           <ol className="mt-6 space-y-4">
             {operatingModel.map((item, index) => (
               <li key={item.name} className="border border-line bg-cream p-5">
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand">{index + 1}</p>
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand">Step {index + 1}</p>
                 <p className="mt-1 font-semibold text-ink">{item.name}</p>
                 <p className="mt-1 text-sm">{item.role}</p>
+                {"lead" in item && item.lead ? (
+                  <div className="mt-4 border-t border-line pt-4">
+                    <p className="font-semibold text-ink">{item.lead.name}</p>
+                    <p className="mt-1 text-sm text-ink-soft">{item.lead.role}</p>
+                    <p className="mt-4 text-xs font-bold uppercase tracking-[0.12em] text-brand">
+                      Partners under {item.lead.name}
+                    </p>
+                    <ul className="mt-3 space-y-3">
+                      {item.partners.map((partner) => (
+                        <li key={partner.name}>
+                          <p className="text-sm font-semibold text-ink">{partner.name}</p>
+                          <p className="mt-0.5 text-sm text-ink-soft">{partner.role}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
               </li>
             ))}
           </ol>

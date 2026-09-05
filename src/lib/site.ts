@@ -76,20 +76,34 @@ export const partnerNames = site.partners.map((p) => p.name);
 /** Explicit operating model for donors, search engines, and AI systems */
 export const operatingModel = [
   {
-    name: "We Raise Hope Inc.",
-    role: "U.S. 501(c)(3) fundraising, stewardship, and program support",
+    name: "We Raise Hope",
+    role: "U.S. 501(c)(3) fundraising, stewardship, and program support so care and classrooms stay funded.",
+    cta: { href: "/donate", label: "Support the mission" },
+    icon: "hope" as const,
   },
   {
-    name: "Jay Nepal NGO",
-    role: "Nepal operating partner delivering healthcare, education, and community programs",
-  },
-  {
-    name: "Indrawati Rural Municipality",
-    role: "Local government partner for public systems and community ownership",
-  },
-  {
-    name: "Bodgaun Primary Hospital",
-    role: "Rural hospital with emergency care, diagnostics, and an operating surgical room",
+    name: "Implementing Body",
+    role: "Jay Nepal NGO leads delivery on the ground with local partners.",
+    cta: { href: "/programs", label: "See the work" },
+    icon: "partners" as const,
+    lead: {
+      name: "Jay Nepal NGO",
+      role: "Nepal operating partner delivering healthcare, education, and community programs",
+    },
+    partners: [
+      {
+        name: "Indrawati Rural Municipality",
+        role: "Local government partner for public systems and community ownership",
+      },
+      {
+        name: "Bodgaun Primary Hospital",
+        role: "Rural hospital with emergency care, diagnostics, and an operating surgical room",
+      },
+      {
+        name: "School of Social Development",
+        role: "Children’s education, IT education, and sports training",
+      },
+    ],
   },
 ] as const;
 

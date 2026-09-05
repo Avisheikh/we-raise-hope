@@ -4,7 +4,6 @@ import { Footer } from "@/components/Footer";
 import { GivebutterScript } from "@/components/GivebutterScript";
 import { Header } from "@/components/Header";
 import { OrganizationJsonLd } from "@/components/OrganizationJsonLd";
-import { StickyDonate } from "@/components/StickyDonate";
 import { defaultMetadata, defaultViewport } from "@/lib/seo";
 import "./globals.css";
 
@@ -48,7 +47,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
-        <StickyDonate />
       </body>
     </html>
   );

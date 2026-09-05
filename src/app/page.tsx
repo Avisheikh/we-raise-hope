@@ -143,32 +143,21 @@ export default function HomePage() {
 
       {/* FA: Crisis / need with math */}
       <section className="section-pad" aria-labelledby="need-heading">
-        <div className="container-page grid items-center gap-10 lg:grid-cols-2">
-          <div>
-            <p className="eyebrow">The need</p>
-            <h2 id="need-heading" className="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Rural families should not travel days for care—or lose a future for lack of a classroom.
-            </h2>
-            <p className="mt-5 text-lg text-ink-soft">
-              Right now, Bodgaun Primary Hospital treats{" "}
-              <strong className="text-ink">550+ patients every month</strong>, with{" "}
-              <strong className="text-ink">13 major</strong> and{" "}
-              <strong className="text-ink">50+ minor surgeries</strong> in {liveImpact.period}. Surgery has
-              arrived—help keep it running.
-            </p>
-            <ButtonLink href="/impact" className="mt-8" variant="secondary">
-              See the impact
-            </ButtonLink>
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden">
-            <Image
-              src={img.where}
-              alt="Rural Nepal communities We Raise Hope supports"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
+        <div className="container-page max-w-3xl">
+          <p className="eyebrow">The need</p>
+          <h2 id="need-heading" className="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+            Rural families should not travel days for care—or lose a future for lack of a classroom.
+          </h2>
+          <p className="mt-5 text-lg text-ink-soft">
+            Right now, Bodgaun Primary Hospital treats{" "}
+            <strong className="text-ink">550+ patients every month</strong>, with{" "}
+            <strong className="text-ink">13 major</strong> and{" "}
+            <strong className="text-ink">50+ minor surgeries</strong> in {liveImpact.period}. Surgery has
+            arrived—help keep it running.
+          </p>
+          <ButtonLink href="/impact" className="mt-8" variant="secondary">
+            See the impact
+          </ButtonLink>
         </div>
       </section>
 
@@ -245,7 +234,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How we work — entity clarity */}
+      {/* How we work — alternating impact cards */}
       <section className="section-pad bg-cream" aria-labelledby="model-home">
         <div className="container-page">
           <p className="eyebrow">How we work</p>
@@ -255,14 +244,72 @@ export default function HomePage() {
           <p className="mt-5 max-w-3xl text-ink-soft">
             Partners: <PartnerLinks separator=", " />.
           </p>
-          <ol className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {operatingModel.map((item, index) => (
-              <li key={item.name} className="border border-line bg-white p-6">
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand">Step {index + 1}</p>
-                <h3 className="font-display mt-2 text-xl font-semibold">{item.name}</h3>
-                <p className="mt-2 text-sm text-ink-soft">{item.role}</p>
-              </li>
-            ))}
+          <ol className="mt-10 grid gap-4 lg:grid-cols-2">
+            {operatingModel.map((item, index) => {
+              const tone = index % 2 === 0 ? "forest" : "deep";
+              return (
+                <li
+                  key={item.name}
+                  className={`flex flex-col rounded-sm p-7 text-white sm:p-8 ${
+                    tone === "forest" ? "bg-forest" : "bg-chocolate"
+                  }`}
+                >
+                  <span
+                    className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand ring-[3px] ring-brand/40"
+                    aria-hidden
+                  >
+                    {item.icon === "hope" ? (
+                      <svg viewBox="0 0 24 24" className="h-7 w-7 text-white" fill="none" stroke="currentColor" strokeWidth="1.8">
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"
+                        />
+                      </svg>
+                    ) : (
+                      <svg viewBox="0 0 24 24" className="h-7 w-7 text-white" fill="none" stroke="currentColor" strokeWidth="1.8">
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M16 11a3 3 0 1 0-2.8-4M8 11a3 3 0 1 1 2.8-4M4.5 19a4.5 4.5 0 0 1 7.2-3.6M12.3 15.4A4.5 4.5 0 0 1 19.5 19"
+                        />
+                      </svg>
+                    )}
+                  </span>
+                  <p className="mt-5 text-xs font-bold uppercase tracking-[0.14em] text-amber">
+                    Step {index + 1}
+                  </p>
+                  <h3 className="font-display mt-2 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                    {item.name}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-white/90 sm:text-base">{item.role}</p>
+                  {"lead" in item && item.lead ? (
+                    <div className="mt-5 border-t border-white/25 pt-4">
+                      <p className="font-semibold text-white">{item.lead.name}</p>
+                      <p className="mt-1 text-sm text-white/85">{item.lead.role}</p>
+                      <p className="mt-4 text-xs font-bold uppercase tracking-[0.12em] text-amber">
+                        Partners under {item.lead.name}
+                      </p>
+                      <ul className="mt-3 space-y-3">
+                        {item.partners.map((partner) => (
+                          <li key={partner.name}>
+                            <p className="text-sm font-semibold text-white">{partner.name}</p>
+                            <p className="mt-0.5 text-sm text-white/80">{partner.role}</p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                  <Link
+                    href={item.cta.href}
+                    className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold text-white no-underline hover:text-amber"
+                  >
+                    {item.cta.label}
+                    <span aria-hidden>→</span>
+                  </Link>
+                </li>
+              );
+            })}
           </ol>
         </div>
       </section>
