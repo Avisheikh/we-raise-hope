@@ -80,8 +80,8 @@ html {
 .home-hero-copy {
   width: 100%;
   max-width: 36rem;
-  margin-inline: auto;
-  text-align: center;
+  margin-inline: 0;
+  text-align: left;
 }
 
 .home-hero-title {
@@ -96,30 +96,20 @@ html {
 }
 
 .home-hero-body {
-  margin: clamp(0.65rem, 1.4vh, 1.15rem) auto 0;
+  margin: clamp(0.65rem, 1.4vh, 1.15rem) 0 0;
   font-size: clamp(0.875rem, 0.4vw + 0.75rem, 1.125rem);
-  max-width: 32rem;
+  max-width: 100%;
 }
 
 .home-hero-actions {
   margin: clamp(1rem, 2.2vh, 1.75rem) 0 0;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 @media (min-width: 768px) {
   .home-hero-copy {
-    margin-inline: 0;
     /* Pull copy off the far left into the left-center of the dark fade */
     margin-left: clamp(2rem, 6vw, 5.5rem);
-    text-align: left;
-  }
-
-  .home-hero-body {
-    margin-inline: 0;
-  }
-
-  .home-hero-actions {
-    justify-content: flex-start;
   }
 }
 
