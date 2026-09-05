@@ -80,17 +80,15 @@ a {
   text-underline-offset: 0.18em;
 }
 
-/* Mobile-friendly tap targets for chrome controls (not body text links) */
+/* Mobile-friendly tap targets for chrome controls (not dense footer link lists) */
 button,
 [role="button"],
 header a,
-footer a,
 .skip-link {
   min-height: 44px;
 }
 
-header a,
-footer a {
+header a {
   display: inline-flex;
   align-items: center;
 }
