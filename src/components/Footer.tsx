@@ -11,7 +11,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <Image
                 src="/logo.png"
-                alt=""
+                alt="We Raise Hope logo"
                 width={44}
                 height={44}
                 className="h-11 w-11 rounded-full bg-white object-contain p-1"

@@ -6,8 +6,8 @@ import { pageMetadata } from "@/lib/seo";
 import { programs } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Our Work | Healthcare, Education, Water & Livelihoods",
-  "Programs We Raise Hope supports in rural Nepal: Bodgaun Primary Hospital surgical care, education and IT schools, clean water, and livelihoods—led locally with Jay Nepal NGO.",
+  "Our Work in Rural Nepal — Healthcare, Education, Water & Livelihoods",
+  "Our work in rural Nepal is built for permanence and led locally: Bodgaun Primary Hospital surgical care, education and IT schools, clean water, and livelihoods with Jay Nepal NGO.",
   "/programs",
 );
 
@@ -18,11 +18,11 @@ export default function ProgramsPage() {
         <div className="container-page max-w-3xl">
           <p className="eyebrow eyebrow-on-dark">Our work</p>
           <h1 className="font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-            Built for permanence, led locally
+            Our work in rural Nepal
           </h1>
           <p className="mt-6 text-lg text-white/80">
-            We invest in systems communities can run—surgical capacity, classrooms, water, and livelihoods—so progress
-            does not leave when a campaign ends.
+            Built for permanence, led locally. Our work in rural Nepal invests in systems communities can run—surgical
+            capacity, classrooms, clean water, and livelihoods—so progress does not leave when a campaign ends.
           </p>
         </div>
       </section>

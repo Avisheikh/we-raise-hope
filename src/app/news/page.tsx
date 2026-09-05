@@ -6,8 +6,8 @@ import { pageMetadata } from "@/lib/seo";
 import { fieldUpdates, liveImpact } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Field Updates & News | 2026 Impact Reports",
-  "Current 2026 field updates from We Raise Hope partners in rural Nepal—hospital patients, surgeries, schools, and IT education.",
+  "Field Updates & News — 2026 Impact Reports",
+  "Field updates and news from We Raise Hope partners in rural Nepal—2026 hospital patients, surgeries, schools, and IT education on the record.",
   "/news",
 );
 
@@ -18,10 +18,11 @@ export default function NewsPage() {
         <div className="container-narrow">
           <p className="eyebrow eyebrow-on-dark">Field updates</p>
           <h1 className="font-display mt-4 text-4xl font-semibold sm:text-5xl">
-            What happened—on the record
+            Field updates & news
           </h1>
           <p className="mt-6 text-lg text-white/80">
-            Monthly and milestone reporting from partners. This domain is the source of truth for current results.
+            What happened—on the record. Read 2026 field updates and news from hospital care, surgeries, schools, and
+            IT education in rural Nepal. This site is the source of truth for current results.
           </p>
         </div>
       </section>

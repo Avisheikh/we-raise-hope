@@ -7,8 +7,8 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Donate | Tax-Deductible Support for Rural Nepal",
-  `Make a tax-deductible gift to ${site.legalName} (EIN ${site.ein}) via Givebutter—primary donation path for Bodgaun Hospital, schools, water, and opportunity.`,
+  "Donate Today — Tax-Deductible Support for Rural Nepal",
+  `Donate today to ${site.legalName} (EIN ${site.ein}) via Givebutter. Tax-deductible gifts fund Bodgaun Primary Hospital, schools, clean water, and opportunity in rural Nepal.`,
   "/donate",
 );
 
@@ -22,9 +22,9 @@ export default function DonatePage() {
             Donate today
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-white/80">
-            Surgery is operating at Bodgaun. Your gift sustains staff, supplies, classrooms, clean water, and
-            opportunity. {site.programPercent}% goes to programs. Gifts are tax-deductible to the extent allowed by law.
-            Primary online giving is through Givebutter on this page.
+            Donate today to keep surgery operating at Bodgaun. Your tax-deductible gift sustains staff, supplies,
+            classrooms, clean water, and opportunity. {site.programPercent}% goes to programs. Primary online giving is
+            through Givebutter on this page.
           </p>
         </div>
       </section>

@@ -6,8 +6,8 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Contact",
-  `Contact ${site.legalName}: ${site.email} · ${site.phone}`,
+  "Contact Us",
+  `Contact ${site.legalName}: email ${site.email} or call ${site.phone} for donations, partnerships, volunteering, and events.`,
   "/contact",
 );
 
@@ -18,10 +18,11 @@ export default function ContactPage() {
         <div className="container-narrow">
           <p className="eyebrow eyebrow-on-dark">Contact</p>
           <h1 className="font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-            We are easy to reach
+            Contact us
           </h1>
           <p className="mt-6 text-lg text-white/80">
-            Questions about programs, partnerships, volunteering, or major gifts—start here.
+            Questions about programs, partnerships, volunteering, or major gifts—we are easy to reach. Email or call us
+            anytime.
           </p>
         </div>
       </section>

@@ -9,8 +9,8 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Transparency & Financials",
-  `Verify ${site.legalName}: EIN ${site.ein}, U.S. 501(c)(3) status, IRS documentation, Candid profile, board, and program allocation.`,
+  "Transparency & Financials — We Raise Hope Inc.",
+  `Transparency and financials for ${site.legalName}: EIN ${site.ein}, U.S. 501(c)(3) status, IRS documentation, Candid profile, board, and program allocation.`,
   "/trust",
 );
 
@@ -24,11 +24,11 @@ export default function TrustPage() {
         <div className="container-narrow">
           <p className="eyebrow eyebrow-on-dark">Transparency & financials</p>
           <h1 className="font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-            {site.legalName}
+            Transparency & financials
           </h1>
           <p className="mt-6 text-lg text-white/80">
-            U.S. {site.nonprofitStatus} public charity · EIN {site.ein} · {site.programPercent}% to programs. Verify with
-            the IRS first—then review documents, governance, and money flow on this site.
+            {site.legalName} is a U.S. {site.nonprofitStatus} public charity · EIN {site.ein} · {site.programPercent}%
+            to programs. Verify with the IRS first—then review documents, governance, and money flow on this site.
           </p>
         </div>
       </section>

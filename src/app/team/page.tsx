@@ -6,8 +6,8 @@ import { pageMetadata } from "@/lib/seo";
 import { board, fieldTeam } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Leadership",
-  "Meet the board and partners behind We Raise Hope Inc.",
+  "Leadership Team — Who Is Accountable",
+  "Meet the leadership team accountable for We Raise Hope Inc.—board members and partners stewarding healthcare and education programs in rural Nepal.",
   "/team",
 );
 
@@ -18,10 +18,11 @@ export default function TeamPage() {
         <div className="container-narrow">
           <p className="eyebrow eyebrow-on-dark">People</p>
           <h1 className="font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-            Who is accountable
+            Leadership team
           </h1>
           <p className="mt-6 text-lg text-white/80">
-            U.S. donors give to people they can name. Meet our board and field partners.
+            Who is accountable for We Raise Hope Inc.—meet the leadership team, board, and partners guiding strategy,
+            stewardship, and locally led work in Nepal. U.S. donors give to people they can name.
           </p>
         </div>
       </section>

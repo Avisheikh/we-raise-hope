@@ -18,8 +18,8 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Healthcare & Education Nonprofit in Rural Nepal",
-  "We Raise Hope Inc. is a U.S. 501(c)(3) supporting Bodgaun Primary Hospital, schools, water, and opportunity in rural Nepal—with measurable 2026 results.",
+  "Give a Child in Rural Nepal the Chance to Learn, Heal & Thrive",
+  "We Raise Hope Inc. is a U.S. 501(c)(3) giving children and families in rural Nepal the chance to learn in school, heal through hospital care, and thrive—supporting Bodgaun Primary Hospital, education, water, and opportunity.",
   "/",
 );
 
@@ -49,7 +49,7 @@ export default function HomePage() {
         <div className="relative h-[48vh] w-full md:absolute md:inset-0 md:h-auto">
           <Image
             src={img.hero}
-            alt="A smiling student in class in rural Nepal"
+            alt="A smiling Nepali girl learning in a classroom in rural Nepal"
             fill
             priority
             className="object-cover object-[28%_18%] md:object-[22%_20%]"
@@ -65,8 +65,9 @@ export default function HomePage() {
               {site.tagline}
             </h1>
             <p className="fade-up-delay-2 mt-5 max-w-md text-base text-ink-soft sm:text-lg">
-              Surgery has arrived in Bodgaun. Help keep hospital care, classrooms, and opportunity running. U.S.{" "}
-              {site.nonprofitStatus} · EIN {site.ein}.
+              We give every child in rural Nepal a real chance to learn in the classroom, heal when illness or injury
+              strikes, and thrive in their community. Surgery is operating at Bodgaun—help keep hospital care,
+              classrooms, and opportunity running. U.S. {site.nonprofitStatus} · EIN {site.ein}.
             </p>
             <div className="fade-up-delay-2 mt-8 flex flex-wrap gap-3">
               <ButtonLink href="/donate" variant="primary" className="!px-7 !py-3.5 !text-base">
@@ -266,7 +267,13 @@ export default function HomePage() {
 
       {/* FA: Our Impact */}
       <section className="relative overflow-hidden section-pad text-white" aria-labelledby="impact-home">
-        <Image src={img.collage} alt="" fill className="object-cover" sizes="100vw" />
+        <Image
+          src={img.collage}
+          alt="Community collage showing children, families, and programs We Raise Hope supports in Nepal"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
         <div className="absolute inset-0 bg-forest/88" />
         <div className="container-page relative">
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-amber">Our impact · {liveImpact.period}</p>
@@ -382,7 +389,13 @@ export default function HomePage() {
 
       {/* FA: Join us strip */}
       <section className="relative overflow-hidden py-20 text-white">
-        <Image src={img.infra} alt="" fill className="object-cover" sizes="100vw" />
+        <Image
+          src={img.infra}
+          alt="Infrastructure and community facilities supported by We Raise Hope in rural Nepal"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
         <div className="absolute inset-0 bg-brand/85" />
         <div className="container-page relative text-center">
           <h2 className="font-display text-3xl font-semibold sm:text-4xl">

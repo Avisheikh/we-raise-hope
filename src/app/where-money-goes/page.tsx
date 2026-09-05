@@ -6,8 +6,8 @@ import { moneyFlow, site } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata(
-  "Where money goes",
-  "See how gifts to We Raise Hope Inc. move from U.S. donors to locally led programs in rural Nepal.",
+  "Where Your Money Goes",
+  "Where your money goes: see how gifts to We Raise Hope Inc. move from U.S. donors to locally led healthcare, education, and community programs in rural Nepal.",
   "/where-money-goes",
 );
 
@@ -21,7 +21,8 @@ export default function WhereMoneyGoesPage() {
             Where your money goes
           </h1>
           <p className="mt-6 text-lg text-white/80">
-            {site.programPercent}% goes to programs. Here is the path—plainly.
+            Where your money goes is simple: {site.programPercent}% to programs. Here is the path from your gift to
+            healthcare, education, and community work in rural Nepal—plainly.
           </p>
         </div>
       </section>

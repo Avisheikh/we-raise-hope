@@ -6,8 +6,8 @@ import { pageMetadata } from "@/lib/seo";
 import { eventPillars, events, site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Events | Galas & Gatherings in New York",
-  "Join We Raise Hope events in New York—including the Metropolitan Club gala—to support healthcare, education, and opportunity in rural Nepal.",
+  "Events & Galas in New York — Gather With Purpose",
+  "Gather with purpose at We Raise Hope events and galas in New York—including the Metropolitan Club—to help hope become lasting progress through healthcare, education, and opportunity in rural Nepal.",
   "/events",
 );
 
@@ -33,9 +33,9 @@ export default function EventsPage() {
             Gather with purpose. Help hope become lasting progress.
           </h1>
           <p className="mt-6 text-lg text-white/80">
-            We Raise Hope connects supporters with locally shaped work in healthcare, education, clean water, skills,
-            and livelihoods. Our events bring people together to understand the mission and help sustain practical
-            solutions in rural Nepal.
+            We Raise Hope events gather supporters with purpose so hope can become lasting progress. Connect with
+            locally shaped work in healthcare, education, clean water, skills, and livelihoods—and help sustain
+            practical solutions in rural Nepal.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href="#upcoming" variant="amber">

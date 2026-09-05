@@ -6,8 +6,8 @@ import { pageMetadata } from "@/lib/seo";
 import { aprilImpact, impactStats, liveImpact, stories } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Our Impact in Nepal | Healthcare, Education & Infrastructure",
-  "Evidence room for We Raise Hope: August 2026 hospital activity (550+ patients/month, major and minor surgeries), education metrics, lifetime proof points, and field stories.",
+  "Our Impact in Nepal — Healthcare, Education & Infrastructure",
+  "Our impact in Nepal: August 2026 hospital activity (550+ patients/month, major and minor surgeries), education metrics, lifetime results, and field stories from We Raise Hope partners.",
   "/impact",
 );
 
@@ -21,7 +21,8 @@ export default function ImpactPage() {
             Our impact in Nepal
           </h1>
           <p className="mt-6 text-lg text-white/80">
-            Numbers with period, definition, and reporting basis. Problem → action → result → proof.
+            Our impact in Nepal spans healthcare, education, and infrastructure—numbers with period, definition, and
+            reporting basis. Problem → action → result → proof.
           </p>
         </div>
       </section>

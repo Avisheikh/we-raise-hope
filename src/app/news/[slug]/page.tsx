@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const update = fieldUpdates.find((item) => item.slug === slug);
   if (!update) return {};
-  return pageMetadata(update.title, update.summary, `/news/${update.slug}`);
+  return pageMetadata(update.title, update.summary, `/news/${update.slug}`, { ogType: "article" });
 }
 
 export default async function NewsUpdatePage({ params }: Props) {

@@ -8,8 +8,8 @@ import { pageMetadata } from "@/lib/seo";
 import { img, operatingModel, site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "About We Raise Hope | U.S. 501(c)(3) Supporting Rural Communities",
-  `${site.legalName} (EIN ${site.ein}) is a New York 501(c)(3) that funds locally led healthcare, education, water, and opportunity in rural Nepal with Jay Nepal NGO and Indrawati Rural Municipality.`,
+  "About Our U.S. Charity and Nepal-Focused Mission",
+  `${site.legalName} (EIN ${site.ein}) is a New York 501(c)(3) U.S. charity with a Nepal-focused mission—funding locally led healthcare, education, water, and opportunity with Jay Nepal NGO and Indrawati Rural Municipality.`,
   "/about",
 );
 
@@ -24,6 +24,10 @@ export default function AboutPage() {
           <h1 className="font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
             A U.S. charity. A Nepal-focused mission.
           </h1>
+          <p className="mt-5 max-w-2xl text-lg text-white/85">
+            We Raise Hope Inc. is a U.S. charity with a Nepal-focused mission: fund locally led healthcare, education,
+            clean water, and opportunity so rural communities can lead lasting change.
+          </p>
         </div>
       </section>
       <TrustBar compact />

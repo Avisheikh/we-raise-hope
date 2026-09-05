@@ -6,8 +6,8 @@ import { pageMetadata } from "@/lib/seo";
 import { img, site, waysToHelp } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Get Involved",
-  "Donate, volunteer, partner, or join We Raise Hope events in New York and Nepal.",
+  "Get Involved — Donate, Volunteer & Partner",
+  "Get involved with We Raise Hope: donate, volunteer, partner with our Nepal programs, or join New York events supporting healthcare and education.",
   "/get-involved",
 );
 

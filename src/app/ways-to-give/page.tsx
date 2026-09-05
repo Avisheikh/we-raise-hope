@@ -5,8 +5,8 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Ways to Give",
-  "One-time gifts, monthly giving, Zelle, Venmo, events, and major gifts to We Raise Hope Inc.",
+  "Ways to Give — Every Path Leads to Rural Nepal",
+  "Ways to give to We Raise Hope Inc.: one-time and monthly gifts, Zelle, Venmo, events, and major gifts—every path leads to rural Nepal.",
   "/ways-to-give",
 );
 
@@ -58,11 +58,12 @@ export default function WaysToGivePage() {
         <div className="container-narrow">
           <p className="eyebrow eyebrow-on-dark">Ways to give</p>
           <h1 className="font-display mt-4 text-4xl font-semibold sm:text-5xl">
-            Every path leads to rural Nepal
+            Ways to give
           </h1>
           <p className="mt-6 text-lg text-white/80">
-            Choose the giving method that fits you. All online gifts to {site.legalName} are received by a U.S.{" "}
-            {site.nonprofitStatus} (EIN {site.ein}).
+            Every path leads to rural Nepal. Choose the giving method that fits you—online, Zelle, Venmo, events, or
+            major gifts. All online gifts to {site.legalName} are received by a U.S. {site.nonprofitStatus} (EIN{" "}
+            {site.ein}).
           </p>
         </div>
       </section>
