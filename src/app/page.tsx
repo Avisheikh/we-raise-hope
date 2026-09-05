@@ -44,32 +44,35 @@ const pathways = [
 export default function HomePage() {
   return (
     <>
-      {/* FA-style hero: brand + strong slogan + dual CTAs */}
-      <section className="relative overflow-hidden bg-cream md:min-h-[78vh]">
-        <div className="relative h-[48vh] w-full md:absolute md:inset-0 md:h-auto">
+      {/* Full-bleed hero: face stays clear on the left; copy sits in a soft right fade */}
+      <section className="relative overflow-hidden bg-cream">
+        <div className="relative h-[52vh] w-full md:absolute md:inset-0 md:h-auto md:min-h-[min(88vh,820px)]">
           <Image
             src={img.hero}
             alt="Two hopeful children looking toward the camera at a community center in rural Nepal"
             fill
             priority
-            className="object-cover object-[center_42%] md:object-[38%_40%]"
+            className="object-cover object-[28%_38%] md:object-[18%_40%]"
             sizes="100vw"
           />
+          <div
+            className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-transparent from-30% via-cream/35 via-55% to-cream to-72% md:block"
+            aria-hidden
+          />
         </div>
-        <div className="container-page relative flex md:min-h-[78vh] md:items-center md:justify-end">
-          <div className="w-full max-w-xl bg-cream py-10 md:my-16 md:bg-cream/95 md:px-10 md:py-12">
+        <div className="container-page relative flex md:min-h-[min(88vh,820px)] md:items-center md:justify-end">
+          <div className="w-full max-w-md py-10 md:py-16 md:pl-6">
             <p className="font-display fade-up text-2xl font-semibold tracking-tight text-forest sm:text-3xl">
               {site.name}
             </p>
-            <h1 className="font-display fade-up-delay mt-4 text-3xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-4xl md:text-5xl">
+            <h1 className="font-display fade-up-delay mt-4 text-3xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-4xl md:text-[2.75rem]">
               {site.tagline}
             </h1>
             <p className="fade-up-delay-2 mt-5 max-w-md text-base text-ink-soft sm:text-lg">
-              We give every child in rural Nepal a real chance to learn in the classroom, heal when illness or injury
-              strikes, and thrive in their community. Surgery is operating at Bodgaun—help keep hospital care,
-              classrooms, and opportunity running. U.S. {site.nonprofitStatus} · EIN {site.ein}.
+              Fund hospital care, classrooms, and opportunity in rural Nepal—U.S. {site.nonprofitStatus}, EIN{" "}
+              {site.ein}.
             </p>
-            <div className="fade-up-delay-2 mt-8 flex flex-wrap justify-center gap-3">
+            <div className="fade-up-delay-2 mt-8 flex flex-wrap gap-3">
               <ButtonLink href="/donate" variant="primary" className="!px-7 !py-3.5 !text-base">
                 Donate now
               </ButtonLink>
@@ -77,7 +80,7 @@ export default function HomePage() {
                 Our work
               </ButtonLink>
             </div>
-            <p className="mt-5 text-center text-sm text-ink-soft">
+            <p className="mt-5 text-sm text-ink-soft">
               Tax-deductible · {site.programPercent}% to programs · Givebutter on this site
             </p>
           </div>
