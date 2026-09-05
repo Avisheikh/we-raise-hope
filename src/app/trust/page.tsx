@@ -9,8 +9,8 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Transparency & Financials — We Raise Hope Inc.",
-  `Transparency and financials for ${site.legalName}: EIN ${site.ein}, U.S. 501(c)(3) status, IRS documentation, Candid profile, board, and program allocation.`,
+  "Transparency & Financials",
+  `Verify ${site.legalName}: EIN ${site.ein}, 501(c)(3) status, IRS docs, Candid, and program allocation.`,
   "/trust",
 );
 

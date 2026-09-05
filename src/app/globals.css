@@ -80,6 +80,40 @@ a {
   text-underline-offset: 0.18em;
 }
 
+/* Mobile-friendly tap targets for chrome controls (not body text links) */
+button,
+[role="button"],
+header a,
+footer a,
+.skip-link {
+  min-height: 44px;
+}
+
+header a,
+footer a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0.25rem;
+  background: var(--brand);
+  color: white;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 .font-display {
   font-family: var(--font-newsreader), Newsreader, ui-serif, Georgia, "Times New Roman", serif;
   font-optical-sizing: auto;

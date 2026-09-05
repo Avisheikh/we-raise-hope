@@ -119,6 +119,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a href={site.social.tiktok} className="no-underline hover:text-white" target="_blank" rel="noopener noreferrer">
+                  TikTok
+                </a>
+              </li>
+              <li>
                 <Link href="/events" className="no-underline hover:text-white">
                   Events
                 </Link>

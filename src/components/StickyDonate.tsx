@@ -6,7 +6,7 @@ export function StickyDonate() {
       <div className="pointer-events-auto">
         <ButtonLink
           href="/donate"
-          className="!rounded-full !px-5 !py-3 shadow-[0_12px_40px_-10px_rgba(207,66,9,0.55)]"
+          className="!min-h-12 !min-w-[7.5rem] !rounded-full !px-6 !py-3.5 !text-base shadow-[0_12px_40px_-10px_rgba(207,66,9,0.55)]"
         >
           Donate now
         </ButtonLink>

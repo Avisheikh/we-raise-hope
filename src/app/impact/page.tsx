@@ -6,8 +6,8 @@ import { pageMetadata } from "@/lib/seo";
 import { aprilImpact, impactStats, liveImpact, stories } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Our Impact in Nepal — Healthcare, Education & Infrastructure",
-  "Our impact in Nepal: August 2026 hospital activity (550+ patients/month, major and minor surgeries), education metrics, lifetime results, and field stories from We Raise Hope partners.",
+  "Our Impact in Nepal",
+  "August 2026 hospital patients, surgeries, education metrics, and field stories from We Raise Hope partners.",
   "/impact",
 );
 

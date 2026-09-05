@@ -7,8 +7,8 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Donate Today — Tax-Deductible Support for Rural Nepal",
-  `Donate today to ${site.legalName} (EIN ${site.ein}) via Givebutter. Tax-deductible gifts fund Bodgaun Primary Hospital, schools, clean water, and opportunity in rural Nepal.`,
+  "Donate Today to Rural Nepal",
+  `Tax-deductible gifts to ${site.legalName} (EIN ${site.ein}) fund Bodgaun Hospital, schools, and opportunity.`,
   "/donate",
 );
 

@@ -5,8 +5,8 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Ways to Give — Every Path Leads to Rural Nepal",
-  "Ways to give to We Raise Hope Inc.: one-time and monthly gifts, Zelle, Venmo, events, and major gifts—every path leads to rural Nepal.",
+  "Ways to Give",
+  "Give online, monthly, Zelle, Venmo, or at events—every gift supports rural Nepal programs.",
   "/ways-to-give",
 );
 

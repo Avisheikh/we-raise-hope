@@ -1,5 +1,6 @@
 import { site } from "@/lib/site";
 
+/** Valid, minimal JSON-LD — avoid OfferCatalog / invalid nested types that fail validators. */
 export function OrganizationJsonLd() {
   const data = {
     "@context": "https://schema.org",
@@ -21,17 +22,11 @@ export function OrganizationJsonLd() {
         legalName: site.legalName,
         alternateName: [site.alternateName, "We Raise Hope Inc"],
         url: site.url,
-        logo: {
-          "@type": "ImageObject",
-          url: `${site.url}/logo.png`,
-          width: 512,
-          height: 512,
-        },
+        logo: `${site.url}/logo.png`,
         image: `${site.url}/logo.png`,
         description: site.description,
         slogan: site.tagline,
         taxID: site.ein,
-        nonprofitStatus: "Nonprofit501c3",
         foundingDate: String(site.founded),
         email: site.email,
         telephone: site.phone,
@@ -41,53 +36,18 @@ export function OrganizationJsonLd() {
           addressRegion: site.address.region,
           addressCountry: "US",
         },
-        areaServed: [
-          {
-            "@type": "AdministrativeArea",
-            name: "Sindhupalchowk District, Nepal",
-          },
-          {
-            "@type": "Country",
-            name: "Nepal",
-          },
-        ],
+        areaServed: {
+          "@type": "Country",
+          name: "Nepal",
+        },
         contactPoint: {
           "@type": "ContactPoint",
-          contactType: "donations and general inquiries",
+          contactType: "customer support",
           email: site.email,
           telephone: site.phone,
-          availableLanguage: ["English"],
+          availableLanguage: "English",
         },
         sameAs: Object.values(site.social),
-        knowsAbout: [
-          "rural healthcare Nepal",
-          "Bodgaun Primary Hospital",
-          "education in Sindhupalchowk",
-          "clean water Nepal",
-          "IT education Nepal",
-        ],
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name: "Ways to support",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Donate",
-                url: `${site.url}/donate`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Event",
-                name: "Events & galas",
-                url: `${site.url}/events`,
-              },
-            },
-          ],
-        },
       },
       {
         "@type": "Hospital",
@@ -102,7 +62,6 @@ export function OrganizationJsonLd() {
           addressRegion: "Sindhupalchowk",
           addressCountry: "NP",
         },
-        parentOrganization: { "@id": `${site.url}/#organization` },
       },
     ],
   };

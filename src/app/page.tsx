@@ -18,8 +18,8 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Give a Child in Rural Nepal the Chance to Learn, Heal & Thrive",
-  "We Raise Hope Inc. is a U.S. 501(c)(3) giving children and families in rural Nepal the chance to learn in school, heal through hospital care, and thrive—supporting Bodgaun Primary Hospital, education, water, and opportunity.",
+  "Learn, Heal & Thrive in Rural Nepal",
+  "U.S. 501(c)(3) helping children learn, heal, and thrive in rural Nepal through hospital care, schools, and opportunity.",
   "/",
 );
 

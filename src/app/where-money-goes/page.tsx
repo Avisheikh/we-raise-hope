@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata(
   "Where Your Money Goes",
-  "Where your money goes: see how gifts to We Raise Hope Inc. move from U.S. donors to locally led healthcare, education, and community programs in rural Nepal.",
+  "See how gifts move from U.S. donors to locally led healthcare and education in rural Nepal.",
   "/where-money-goes",
 );
 

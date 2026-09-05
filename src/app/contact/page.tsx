@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
   "Contact Us",
-  `Contact ${site.legalName}: email ${site.email} or call ${site.phone} for donations, partnerships, volunteering, and events.`,
+  `Email ${site.email} or call ${site.phone} for donations, partnerships, volunteering, and events.`,
   "/contact",
 );
 

@@ -9,7 +9,7 @@ export function GivebutterScript() {
   return (
     <Script
       src={`https://widgets.givebutter.com/latest.umd.cjs?acct=${acct}&p=other`}
-      strategy="afterInteractive"
+      strategy="lazyOnload"
     />
   );
 }

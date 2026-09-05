@@ -4,8 +4,12 @@ export const site = {
   alternateName: "We Raise Hope Global",
   tagline: "Give a child in rural Nepal the chance to learn, heal, and thrive.",
   description:
-    "We Raise Hope Inc. is a U.S. 501(c)(3) public charity that funds locally led healthcare, education, clean water, and opportunity in rural Nepal—especially Sindhupalchowk District—in partnership with Jay Nepal NGO and Indrawati Rural Municipality.",
-  url: "https://weraisehope.org",
+    "U.S. 501(c)(3) funding healthcare, education, and opportunity in rural Nepal with Bodgaun Hospital and local partners.",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+    (process.env.RAILWAY_PUBLIC_DOMAIN
+      ? `https://${process.env.RAILWAY_PUBLIC_DOMAIN}`
+      : "https://weraisehope.org"),
   email: "info@weraisehope.org",
   phone: "+1 (917) 863-6902",
   phoneTel: "+19178636902",

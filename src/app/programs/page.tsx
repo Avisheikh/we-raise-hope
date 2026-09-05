@@ -6,8 +6,8 @@ import { pageMetadata } from "@/lib/seo";
 import { programs } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Our Work in Rural Nepal — Healthcare, Education, Water & Livelihoods",
-  "Our work in rural Nepal is built for permanence and led locally: Bodgaun Primary Hospital surgical care, education and IT schools, clean water, and livelihoods with Jay Nepal NGO.",
+  "Our Work in Rural Nepal",
+  "Healthcare, education, clean water, and livelihoods—locally led programs with Jay Nepal NGO in Sindhupalchowk.",
   "/programs",
 );
 

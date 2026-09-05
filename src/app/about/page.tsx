@@ -8,8 +8,8 @@ import { pageMetadata } from "@/lib/seo";
 import { img, operatingModel, site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "About Our U.S. Charity and Nepal-Focused Mission",
-  `${site.legalName} (EIN ${site.ein}) is a New York 501(c)(3) U.S. charity with a Nepal-focused mission—funding locally led healthcare, education, water, and opportunity with Jay Nepal NGO and Indrawati Rural Municipality.`,
+  "About Our U.S. Charity Mission",
+  "New York 501(c)(3) with a Nepal-focused mission—healthcare, education, water, and opportunity with local partners.",
   "/about",
 );
 

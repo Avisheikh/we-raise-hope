@@ -6,8 +6,8 @@ import { pageMetadata } from "@/lib/seo";
 import { fieldUpdates, liveImpact } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Field Updates & News — 2026 Impact Reports",
-  "Field updates and news from We Raise Hope partners in rural Nepal—2026 hospital patients, surgeries, schools, and IT education on the record.",
+  "Field Updates & News",
+  "2026 field updates from We Raise Hope—hospital patients, surgeries, schools, and IT education in rural Nepal.",
   "/news",
 );
 

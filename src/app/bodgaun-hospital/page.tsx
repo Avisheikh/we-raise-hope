@@ -6,8 +6,8 @@ import { pageMetadata } from "@/lib/seo";
 import { bodgaun, img, liveImpact, site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Bodgaun Primary Hospital — Rural Healthcare in Nepal",
-  "Bodgaun Primary Hospital in Sindhupalchowk provides emergency care, diagnostics, and an operating surgical room. We Raise Hope Inc. helps fund this locally led rural healthcare facility in Nepal.",
+  "Bodgaun Primary Hospital",
+  "Rural hospital in Sindhupalchowk with emergency care, diagnostics, and an operating surgical room.",
   "/bodgaun-hospital",
 );
 

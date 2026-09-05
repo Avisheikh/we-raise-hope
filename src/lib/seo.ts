@@ -3,6 +3,15 @@ import { site } from "@/lib/site";
 
 const baseUrl = site.url;
 
+/** Keep absolute titles under ~60 chars for SEO tools. */
+export function absoluteTitle(pageTitle: string): string {
+  const brand = site.name;
+  const withBrand = `${pageTitle} | ${brand}`;
+  if (withBrand.length <= 60) return withBrand;
+  if (pageTitle.length <= 60) return pageTitle;
+  return `${pageTitle.slice(0, 57).trimEnd()}…`;
+}
+
 export const defaultViewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#CF4209" },
@@ -10,12 +19,13 @@ export const defaultViewport: Viewport = {
   ],
   width: "device-width",
   initialScale: 1,
+  maximumScale: 5,
 };
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: `${site.name} | Give a Child in Rural Nepal the Chance to Learn, Heal & Thrive`,
+    default: absoluteTitle("Healthcare & Education in Rural Nepal"),
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -43,7 +53,7 @@ export const defaultMetadata: Metadata = {
     locale: "en_US",
     url: baseUrl,
     siteName: site.name,
-    title: `${site.name} | Give a Child in Rural Nepal the Chance to Learn, Heal & Thrive`,
+    title: absoluteTitle("Healthcare & Education in Rural Nepal"),
     description: site.description,
     images: [
       {
@@ -56,7 +66,7 @@ export const defaultMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} | Learn, Heal & Thrive in Rural Nepal`,
+    title: absoluteTitle("Healthcare & Education in Rural Nepal"),
     description: site.description,
     images: ["/opengraph-image"],
   },
@@ -73,6 +83,10 @@ export const defaultMetadata: Metadata = {
   },
   alternates: {
     canonical: baseUrl,
+    languages: {
+      en: baseUrl,
+      "x-default": baseUrl,
+    },
   },
 };
 
@@ -83,15 +97,24 @@ export function pageMetadata(
   options?: { ogType?: "website" | "article" },
 ): Metadata {
   const url = path === "/" ? baseUrl : `${baseUrl}${path}`;
-  const fullTitle = `${title} | ${site.name}`;
+  const fullTitle = absoluteTitle(title);
+  const shortDescription =
+    description.length > 155 ? `${description.slice(0, 152).trimEnd()}…` : description;
+
   return {
     title: { absolute: fullTitle },
-    description,
-    alternates: { canonical: url },
+    description: shortDescription,
+    alternates: {
+      canonical: url,
+      languages: {
+        en: url,
+        "x-default": url,
+      },
+    },
     openGraph: {
       type: options?.ogType ?? "website",
       title: fullTitle,
-      description,
+      description: shortDescription,
       url,
       siteName: site.name,
       locale: "en_US",
@@ -107,7 +130,7 @@ export function pageMetadata(
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
-      description,
+      description: shortDescription,
       images: ["/opengraph-image"],
     },
     robots: {

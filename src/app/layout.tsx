@@ -38,6 +38,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${newsreader.variable} ${sourceSans.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans text-ink">
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <GivebutterScript />
         <OrganizationJsonLd />
         <Header />
