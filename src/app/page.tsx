@@ -29,11 +29,6 @@ const pathways = [
     body: "A New York 501(c)(3) funding locally led programs in rural Nepal.",
   },
   {
-    href: "/bodgaun-hospital",
-    title: "See the hospital",
-    body: "Bodgaun Primary Hospital—surgical care is operating. Help keep it running.",
-  },
-  {
     href: "/where-money-goes",
     title: "Where money goes",
     body: "Clear path from your gift to partners and programs on the ground.",
@@ -43,49 +38,51 @@ const pathways = [
 export default function HomePage() {
   return (
     <>
-      {/* FA-style hero: subject fully visible on the right; brand + copy on a dark left fade */}
-      <section className="relative min-h-[min(82vh,740px)] overflow-hidden bg-forest">
-        <Image
-          src={img.hero}
-          alt="A hopeful child in rural Nepal, fully visible, looking toward the camera with a warm smile"
-          fill
-          priority
-          quality={90}
-          className="object-cover object-[64%_30%]"
-          sizes="100vw"
-        />
-        <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/45 to-transparent md:bg-gradient-to-r md:from-forest/90 md:via-forest/50 md:via-32% md:to-transparent md:to-55%"
-          aria-hidden
-        />
-        <div className="container-page relative flex min-h-[min(82vh,740px)] items-end pb-14 pt-24 md:items-center md:pb-20 md:pt-16">
-          <div className="max-w-xl text-white md:max-w-[34rem]">
-            <p className="font-display fade-up text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
-              {site.name}
-            </p>
-            <h1 className="font-display fade-up-delay mt-5 text-2xl font-semibold leading-[1.12] tracking-tight text-white sm:text-3xl md:text-4xl">
-              {site.tagline}
-            </h1>
-            <p className="fade-up-delay-2 mt-5 max-w-md text-base leading-relaxed text-white/90 sm:text-lg">
-              When we give together, children in rural Nepal can learn, heal, and thrive—closer to home.
-            </p>
-            <div className="fade-up-delay-2 mt-8 flex flex-wrap gap-3">
-              <ButtonLink
-                href="/donate"
-                variant="amber"
-                className="!px-8 !py-3.5 !text-sm !font-bold !uppercase !tracking-wide !text-ink"
-              >
-                Give now
-              </ButtonLink>
-              <ButtonLink href="/programs" variant="ghostLight">
-                Our work
-              </ButtonLink>
+      {/* First viewport: hero + TrustBar (below sticky header) */}
+      <div className="flex min-h-[calc(100dvh-8.75rem)] flex-col lg:min-h-[calc(100dvh-6.25rem)]">
+        <section className="relative flex min-h-0 flex-1 overflow-hidden bg-forest">
+          <Image
+            src={img.hero}
+            alt="A hopeful child in rural Nepal, fully visible, looking toward the camera with a warm smile"
+            fill
+            priority
+            quality={90}
+            className="object-cover object-[64%_28%]"
+            sizes="100vw"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/45 to-transparent md:bg-gradient-to-r md:from-forest/90 md:via-forest/50 md:via-32% md:to-transparent md:to-55%"
+            aria-hidden
+          />
+          <div className="container-page relative flex flex-1 items-end py-8 md:items-center md:py-10 lg:py-12">
+            <div className="max-w-xl text-white md:max-w-[34rem]">
+              <p className="font-display fade-up text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+                {site.name}
+              </p>
+              <h1 className="font-display fade-up-delay mt-3 text-xl font-semibold leading-[1.12] tracking-tight text-white sm:mt-4 sm:text-2xl md:text-3xl lg:text-4xl">
+                {site.tagline}
+              </h1>
+              <p className="fade-up-delay-2 mt-3 max-w-md text-sm leading-relaxed text-white/90 sm:mt-4 sm:text-base md:text-lg">
+                When we give together, children in rural Nepal can learn, heal, and thrive—closer to home.
+              </p>
+              <div className="fade-up-delay-2 mt-5 flex flex-wrap gap-3 sm:mt-7">
+                <ButtonLink
+                  href="/donate"
+                  variant="amber"
+                  className="!px-7 !py-3 !text-sm !font-bold !uppercase !tracking-wide !text-ink"
+                >
+                  Give now
+                </ButtonLink>
+                <ButtonLink href="/programs" variant="ghostLight">
+                  Our work
+                </ButtonLink>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <TrustBar />
+        <TrustBar compact />
+      </div>
 
       {/* FA: Start here / utility pathways */}
       <section className="section-pad bg-cream" aria-labelledby="pathways">
@@ -94,7 +91,7 @@ export default function HomePage() {
           <h2 id="pathways" className="font-display mt-3 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
             Understand the need. See the work. Make a difference.
           </h2>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="mt-10 grid max-w-4xl gap-4 md:grid-cols-2">
             {pathways.map((item) => (
               <Link
                 key={item.href}
