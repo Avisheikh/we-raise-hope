@@ -12,16 +12,10 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50">
       <div className="bg-forest text-white">
-        <div className="container-page flex h-9 items-center justify-between text-xs">
+        <div className="container-page flex h-9 items-center text-xs">
           <p className="font-medium tracking-wide text-white/85">
             U.S. {site.nonprofitStatus} · EIN {site.ein} · {site.programPercent}% to programs
           </p>
-          <a
-            href={`tel:${site.phoneTel}`}
-            className="hidden text-white/85 no-underline hover:text-white sm:inline"
-          >
-            {site.phone}
-          </a>
         </div>
       </div>
 

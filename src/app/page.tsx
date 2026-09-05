@@ -44,45 +44,44 @@ const pathways = [
 export default function HomePage() {
   return (
     <>
-      {/* Full-bleed hero: face stays clear on the left; copy sits in a soft right fade */}
-      <section className="relative overflow-hidden bg-cream">
-        <div className="relative h-[52vh] w-full md:absolute md:inset-0 md:h-auto md:min-h-[min(88vh,820px)]">
-          <Image
-            src={img.hero}
-            alt="Two hopeful children looking toward the camera at a community center in rural Nepal"
-            fill
-            priority
-            className="object-cover object-[28%_38%] md:object-[18%_40%]"
-            sizes="100vw"
-          />
-          <div
-            className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-transparent from-30% via-cream/35 via-55% to-cream to-72% md:block"
-            aria-hidden
-          />
-        </div>
-        <div className="container-page relative flex md:min-h-[min(88vh,820px)] md:items-center md:justify-end">
-          <div className="w-full max-w-md py-10 md:py-16 md:pl-6">
-            <p className="font-display fade-up text-2xl font-semibold tracking-tight text-forest sm:text-3xl">
+      {/* FA-style hero: subject fully visible on the right; brand + copy on a dark left fade */}
+      <section className="relative min-h-[min(82vh,740px)] overflow-hidden bg-forest">
+        <Image
+          src={img.hero}
+          alt="A hopeful child in rural Nepal, fully visible, looking toward the camera with a warm smile"
+          fill
+          priority
+          quality={90}
+          className="object-cover object-[64%_30%]"
+          sizes="100vw"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/45 to-transparent md:bg-gradient-to-r md:from-forest/90 md:via-forest/50 md:via-32% md:to-transparent md:to-55%"
+          aria-hidden
+        />
+        <div className="container-page relative flex min-h-[min(82vh,740px)] items-end pb-14 pt-24 md:items-center md:pb-20 md:pt-16">
+          <div className="max-w-xl text-white md:max-w-[34rem]">
+            <p className="font-display fade-up text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
               {site.name}
             </p>
-            <h1 className="font-display fade-up-delay mt-4 text-3xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-4xl md:text-[2.75rem]">
+            <h1 className="font-display fade-up-delay mt-5 text-2xl font-semibold leading-[1.12] tracking-tight text-white sm:text-3xl md:text-4xl">
               {site.tagline}
             </h1>
-            <p className="fade-up-delay-2 mt-5 max-w-md text-base text-ink-soft sm:text-lg">
-              Fund hospital care, classrooms, and opportunity in rural Nepal—U.S. {site.nonprofitStatus}, EIN{" "}
-              {site.ein}.
+            <p className="fade-up-delay-2 mt-5 max-w-md text-base leading-relaxed text-white/90 sm:text-lg">
+              When we give together, children in rural Nepal can learn, heal, and thrive—closer to home.
             </p>
             <div className="fade-up-delay-2 mt-8 flex flex-wrap gap-3">
-              <ButtonLink href="/donate" variant="primary" className="!px-7 !py-3.5 !text-base">
-                Donate now
+              <ButtonLink
+                href="/donate"
+                variant="amber"
+                className="!px-8 !py-3.5 !text-sm !font-bold !uppercase !tracking-wide !text-ink"
+              >
+                Give now
               </ButtonLink>
-              <ButtonLink href="/programs" variant="ghost">
+              <ButtonLink href="/programs" variant="ghostLight">
                 Our work
               </ButtonLink>
             </div>
-            <p className="mt-5 text-sm text-ink-soft">
-              Tax-deductible · {site.programPercent}% to programs · Givebutter on this site
-            </p>
           </div>
         </div>
       </section>

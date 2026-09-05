@@ -484,7 +484,7 @@ export const eventPillars = [
 ] as const;
 
 export const img = {
-  hero: "/images/generated/hero-children-hope.jpg",
+  hero: "/images/generated/hero-hope-child-fa.jpg",
   mission: "/images/from-wrh/uploads/our_mission_sme8ym.png",
   where: "/images/from-wrh/uploads/wherewework_nsnpar.jpg",
   engage: "/images/from-wrh/uploads/engage_froxgo.jpg",
