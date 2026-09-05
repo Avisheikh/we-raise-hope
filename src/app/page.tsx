@@ -69,14 +69,14 @@ export default function HomePage() {
                 <ButtonLink
                   href="/donate"
                   variant="amber"
-                  className="!px-5 !py-2.5 !text-xs !font-bold !uppercase !tracking-wide !text-ink sm:!px-7 sm:!py-3 sm:!text-sm"
+                  className="!px-6 !py-3 !text-sm !font-bold !uppercase !tracking-wide !text-ink"
                 >
                   Give now
                 </ButtonLink>
                 <ButtonLink
                   href="/programs"
                   variant="ghostLight"
-                  className="!px-5 !py-2.5 !text-xs sm:!px-6 sm:!py-3 sm:!text-sm"
+                  className="!px-6 !py-3 !text-sm"
                 >
                   Our work
                 </ButtonLink>
