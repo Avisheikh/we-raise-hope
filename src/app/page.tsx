@@ -49,10 +49,10 @@ export default function HomePage() {
         <div className="relative h-[48vh] w-full md:absolute md:inset-0 md:h-auto">
           <Image
             src={img.hero}
-            alt="A smiling Nepali girl learning in a classroom in rural Nepal"
+            alt="Two hopeful children looking toward the camera at a community center in rural Nepal"
             fill
             priority
-            className="object-cover object-[28%_18%] md:object-[22%_20%]"
+            className="object-cover object-[center_42%] md:object-[38%_40%]"
             sizes="100vw"
           />
         </div>
@@ -69,7 +69,7 @@ export default function HomePage() {
               strikes, and thrive in their community. Surgery is operating at Bodgaun—help keep hospital care,
               classrooms, and opportunity running. U.S. {site.nonprofitStatus} · EIN {site.ein}.
             </p>
-            <div className="fade-up-delay-2 mt-8 flex flex-wrap gap-3">
+            <div className="fade-up-delay-2 mt-8 flex flex-wrap justify-center gap-3">
               <ButtonLink href="/donate" variant="primary" className="!px-7 !py-3.5 !text-base">
                 Donate now
               </ButtonLink>
@@ -77,7 +77,7 @@ export default function HomePage() {
                 Our work
               </ButtonLink>
             </div>
-            <p className="mt-5 text-sm text-ink-soft">
+            <p className="mt-5 text-center text-sm text-ink-soft">
               Tax-deductible · {site.programPercent}% to programs · Givebutter on this site
             </p>
           </div>
