@@ -29,20 +29,17 @@ export function Header() {
         <div className="container-page flex h-16 items-center justify-between gap-4">
           <Link
             href="/"
-            className="group flex items-center gap-2.5 no-underline"
+            className="flex shrink-0 items-center no-underline"
             onClick={() => setOpen(false)}
           >
             <Image
               src="/logo.png"
-              alt={`${site.name} logo`}
-              width={40}
-              height={40}
-              className="h-10 w-10 object-contain"
+              alt={site.name}
+              width={300}
+              height={99}
+              className="h-11 w-auto object-contain sm:h-12"
               priority
             />
-            <span className="font-display text-lg font-semibold tracking-tight text-forest group-hover:text-brand">
-              {site.name}
-            </span>
           </Link>
 
           <nav className="hidden items-center gap-5 xl:flex" aria-label="Primary">
